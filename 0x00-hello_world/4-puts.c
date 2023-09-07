@@ -1,10 +1,8 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
- * Description: A c program that prints with put functions don
- *
- * Return: Always 0 (Success)
+ * main - Entry point "Programming is like building a multilingual puzzle"
+ * Return: 0 and exit the program
  */
 int main(void)
 {
