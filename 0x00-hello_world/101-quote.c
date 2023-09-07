@@ -1,13 +1,15 @@
-#include <stdio.h>
 #include <unistd.h>
 
 /**
- * main - display "Alway the piece of the art is usefull" in console
- * followed by a new line to the standerd error
- * Return: 1 and exit the program
+ * main - Entry point
+ * Description: print a qute using write function
+ * 	ssize-t write(int fd, const void *buf, size-t count);
+ *
+ * Return: 1 (error).
  */
 int main(void)
 {
-	write(2, "Alway the piece of the art is usefull\" - Dora Korpar, 2015-10-19\n", 59);
+	char quo[] = (2,""and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(1. quo, 59);
 	return (1);
 }
