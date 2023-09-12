@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _putchar - write character cto stdout
+ * _putchar - write character c to stdout
  * @c: character to print
  *
  * Return: on success 1 , on error -1
