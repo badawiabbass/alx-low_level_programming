@@ -1,14 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - prints number and follow by a new line into it 
- * @argc: type int argument
- * @argv: tupe char argument of strings into it 
+ * main - prints number of arguments and follow by a new line passed into it.
+ * @argc: tye int argument
+ * @argv: type char argument of strings
  * Return: 0
  */
+
 int main(int argc, char *argv[])
 {
 	(void) argv;
-	printf("%d\n",argc - 1);
+
+	printf("%d\n", argc - 1);
+
 	return (0);
 }
