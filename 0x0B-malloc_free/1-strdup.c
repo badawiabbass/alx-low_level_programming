@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup - returns *p to new alloc sapce in memory,which contains cp of str as par.
+ * _strdup - returns *p to new alloc spc in mem, contains cp of str as par.
  * @str: type char memory value.
  * Return: Null if fails or if srt is NULL.
  */
