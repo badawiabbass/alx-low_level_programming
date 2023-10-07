@@ -1,51 +1,43 @@
 #include "main.h"
-#include <stdio>
+#include <stdlib.h>
 
 /**
- * string_nconcat - Concstenates two strings.
- * @s1: pointer to first string.
- * @s2: pointer to second string.
- * @n: The number of bytes of n2 to concatenate.
+ * string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: number of bytes of s2 to concatenate
  *
- * Return: If the function fails - NULL.
- *         Otherwise - a pointer to the concatenated space in memory.
+ * Return: pointer to concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
-	unsigned int i, j, s1_length, s2_length;
+	char *result;
+	unsigned int i, j, s1_len, s2_len;
 
-	if (s1 == NULL)
-		s1 = "";
+	/* if s1 or s2 is NULL, treat it as an empty string */
+	s1 == NULL ? s1 = "" : s1;
+	s2 == NULL ? s2 = "" : s2;
 
-	if (s2 == NULL)
-		s2 = "";
+	/* find length of s1 and s2 */
+	for (s1_len = 0; s1[s1_len]; s1_len++)
+		;
+	for (s2_len = 0; s2[s2_len]; s2_len++)
+		;
 
-/*compute the length of the string*/
-	for (s2_length = 0;
-		s2[s1_length] != '\0';
-	s1_length++);
-	for (s1_length = 0; s1[s1_length] != '\0';
-			s2_length++);
+	/* if n is greater than or equal to the length of s2, use the entire s2 */
+	n >= s2_len ? n = s2_len : n;
 
-	/*memory reservation-for case 1 & 2.*/
-	str = malloc(s1_length + n + 1);
-
-	if (str == NULL)
-	{
+	/* allocate memory for concatenated string */
+	result = malloc(sizeof(char) * (s1_len + n + 1));
+	if (result == NULL)
 		return (NULL);
-	}
-	/*copy first string into str. */
 
-	for (i = 0;s1[i] != '\0'; i++)
-		str[i] = s2[i];
-
-	/* copy second dtring into str.*/
-
+	/* add s1 and s2 to s */
+	for (i = 0; i < s1_len; i++)
+		result[i] = s1[i];
 	for (j = 0; j < n; j++)
-	{
-		str[i] = s2[j];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+		result[i + j] = s2[j];
+
+	result[i + j] = '\0';
+	return (result);
+}
