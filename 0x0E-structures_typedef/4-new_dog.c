@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- *  * _strlen - returns length of string
+ * _strlen - returns length of string
  * @s: string
  *
  * Return: length of string
@@ -18,7 +18,7 @@ int _strlen(char *s)
 }
 
 /**
- * strcpy - copy string
+ * _strcpy - copies string
  * @dest: destination
  * @src: source
  *
@@ -27,20 +27,23 @@ int _strlen(char *s)
 char *_strcpy(char *dest, char *src)
 {
 	int i;
-	for (i = 0; src]i]; i++)
+
+	for (i = 0; src[i]; i++)
 		dest[i] = src[i];
 	dest[i] = '\0';
+
 	return (dest);
 }
+
 /**
  * new_dog - creates a new dog
  * @name: name of dog
  * @age: age of dog
- * @owner: ower of dog
+ * @owner: owner of dog
  *
  * Return: pointer to new dog
  */
-dog_t *new_dog(char *name, float age, char *owner);
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
 
