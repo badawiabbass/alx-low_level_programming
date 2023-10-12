@@ -6,7 +6,7 @@
  * @n: number of arguments
  * Return: integer result or 0 if n == 0
  */
-void print_all(const char * const format, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 	if (n == 0) 
 	{
