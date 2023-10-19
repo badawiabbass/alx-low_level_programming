@@ -3,21 +3,22 @@
 
 
 /**
- * @brief List structure
- * structure for list
- * @param str - string
- * @param len - length of string
- * @param next - pointer to next node
- * @return pointer to list
- * 
+ *list_t - list structure
+* struct list_s - structure for list
+* @param str - string
+* @param len - length of string
+* @param next - pointer to next node
+* @return pointer to list
 */
+
 typedef struct list_s
+
 {
 	char *str;
 	unsigned int len;
 	struct list_s *next;
 
-} 
+}
 list_t;
 
 
