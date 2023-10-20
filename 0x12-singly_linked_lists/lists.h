@@ -4,11 +4,11 @@
 
 /**
  *list_t - list structure
-* struct list_s - structure for list
 * @param str - string
 * @param len - length of string
 * @param next - pointer to next node
 * @return pointer to list
+* typedef_struct_list_s - list structure
 */
 
 typedef struct list_s
